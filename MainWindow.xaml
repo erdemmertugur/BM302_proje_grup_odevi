@@ -1,0 +1,154 @@
+﻿<Window x:Class="ErdemMertUgur.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ErdemMertUgur"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024" WindowStyle="None" WindowState="Maximized"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"   >
+    <Window.Resources>
+        <Style x:Key="EmuMenuStyle" TargetType="Menu">
+            <Setter Property="Height" Value="30" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+        <Style x:Key="EmuMenuItem" TargetType="MenuItem">
+            <Setter Property="Height" Value="30" />
+
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Background="#FF1E1E1E">
+        <Grid>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            
+            
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image Source="Asset/EMU.png" Height="100" Width="200" ></Image>
+                    <Border BorderThickness="3" BorderBrush="#FF6700" CornerRadius="3"></Border>
+                    <Image x:Name="ImgJobOrder" Source="Asset/JobOrderIconGray.png" Width="50" Height="50" Margin="10,15,0,0" />
+                    <Image x:Name="ImgLaser" Source="Asset/LaserIcon.png"  Width="50" Height="50" Margin="20,15,0,0"  />
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Image Name="LogBtn" Source="Asset/LogIconGray.png" Width="50" Height="50" Margin="0,0,0,0"></Image>
+                    <Image Name="ImgSettings" Source="Asset/SettingsIconGray.png" Width="50" Height="50" Margin="25,0,0,0" ></Image>
+                    <Image Name="ImgMinimize" Source="Asset/MinimizeIconGray.png" Width="50" Height="50" Margin="25,0,0,0" ></Image>
+                    <Image Name="ImgQuit" Source="Asset/ShutIconGray.png" Width="50" Height="50" Margin="25,0,20,0" ></Image>
+                </StackPanel>
+
+
+                <Image Name="PlayPauseBtn" Margin="30,0,0,0" Grid.Column="1" Width="50" Height="50" Source="Asset/StartIconGray.png" HorizontalAlignment="Left" Visibility="Visible"  ></Image>
+                <Image Name="ImgLoading" Margin="30,0,0,0" Grid.Column="1" Width="50" Height="50"  HorizontalAlignment="Left" Visibility="Collapsed"></Image>
+                <Image Name="ImgPause" Margin="30,0,0,0" Grid.Column="1" Width="50" Height="50" Source="Asset/PauseIconGray.png" HorizontalAlignment="Left" Visibility="Collapsed"></Image>
+                <StackPanel Grid.Column="1" Margin="60,0,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <Label x:Name="StatusLbl" VerticalAlignment="Center" Margin="10" Grid.Column="1" Content="- HAZIR -" Foreground="#E7E7E7" FontSize="30" HorizontalAlignment="Center" ></Label>
+                    <Image Name="StopBtn" Margin="10" Grid.Column="1" Width="50" Height="50" Source="Asset/StopIconGray.png"    HorizontalAlignment="Left" Visibility="Visible"></Image>
+                </StackPanel>
+
+            </Grid>
+
+
+
+            <!-- Anasayfa işlemleri -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="12*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left">
+
+                        <StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="İş Emri Adı :"   Width="100" Margin="10" Foreground="#E7E7E7"></TextBlock>
+                                <TextBox Name="TxtJobOrder" Width="100" BorderBrush="#E7E7E7" Foreground="White" Background="Transparent"  Margin="10"></TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="Markalama Hızı : "  Width="100" Margin="10" Foreground="#E7E7E7"></TextBlock>
+                                <TextBox Name="TxtMarkinSpeed" BorderBrush="#E7E7E7" Width="100" Foreground="White" Background="Transparent" Margin="10"></TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="Markalama Gücü : "  Width="100" Margin="10" Foreground="#E7E7E7"></TextBlock>
+                                <TextBox Name="TxtMarkingPower" Width="100" BorderBrush="#E7E7E7" Foreground="White" Background="Transparent" Margin="10"></TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="OK : "  Width="100" Margin="10" Foreground="#E7E7E7"></TextBlock>
+                                <TextBox Name="TxtReadProduct" Width="100" BorderBrush="#E7E7E7" Foreground="White" Background="Transparent" Margin="10"></TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="NOK : "  Width="100" Margin="10" Foreground="#E7E7E7"></TextBlock>
+                                <TextBox Name="TxtNoReadProduct" Width="100" BorderBrush="#E7E7E7" Foreground="White" Background="Transparent" Margin="10"></TextBox>
+                            </StackPanel>
+
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Name="ImgConnectionStatusSQL" Source="Asset/DisconnectedIcon.png" Width="25" Height="25" Margin="5"></Image>
+                                <TextBlock Text="SQL Bağlantısı" TextAlignment="Center" Foreground="#E7E7E7" Margin="10"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Name="ImgConnectionStatusTCP" Source="Asset/DisconnectedIcon.png" Width="25" Height="25" Margin="5"></Image>
+                                <TextBlock Text="Lazer Bağlantısı" TextAlignment="Center" Foreground="#E7E7E7" Margin="10"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Name="ImgConnectionStatusPLC" Source="Asset/DisconnectedIcon.png" Width="25" Height="25" Margin="5"></Image>
+                                <TextBlock Text="PLC Bağlantısı" TextAlignment="Center" Foreground="#E7E7E7" Margin="10"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Name="ImgConnectionStatusCamera" Source="Asset/DisconnectedIcon.png" Width="25" Height="25" Margin="5"></Image>
+                                <TextBlock Text="Kamera Bağlantısı" TextAlignment="Center" Foreground="#E7E7E7" Margin="10"></TextBlock>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </StackPanel>
+                    <Label Name="LblDate"   HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#E7E7E7"  FontSize="24" Margin="0,0,0,31"></Label>
+                    <Label Name="version" Content="ErdemMertUgur"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#E7E7E7"  FontSize="24" Margin="1,0,0,-5"></Label>
+                </Grid>
+
+
+                <Grid Grid.Column="1" x:Name="StationGif">
+
+
+
+                    <Image Height="300" Width="300" Margin="0,0,0,0" Source="Asset/CircleAndBoxesTransparentGray.png" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
+                    <StackPanel Width="250" Height="150" Margin="-5,-5,0,0" >
+                       
+                    </StackPanel>
+
+
+                    <!--<Border Background="#FF1E1E1E" BorderBrush="DarkRed" BorderThickness="3" CornerRadius="1000" HorizontalAlignment="Center" Height="425" Width="425" VerticalAlignment="Center">
+                        <Image gif:ImageBehavior.AnimatedSource="Asset/RotatingCircleTransparent.gif"></Image>
+                    </Border>-->
+                </Grid>
+
+                <!-- Slot Screen -->
+                <Grid x:Name="slotGrid" Grid.Column="2">
+
+                    <Frame x:Name="SlotFrame"></Frame>
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

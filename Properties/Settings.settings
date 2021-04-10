@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WpfApp1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TCP_Ip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.239.108</Value>
+    </Setting>
+    <Setting Name="TCP_Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
+    <Setting Name="SQL_Host" Type="System.String" Scope="User">
+      <Value Profile="(Default)">200.250.300.350</Value>
+    </Setting>
+    <Setting Name="SQL_Catalog" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ErdemMertUgur</Value>
+    </Setting>
+    <Setting Name="SQL_User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EMU</Value>
+    </Setting>
+    <Setting Name="SQL_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123</Value>
+    </Setting>
+    <Setting Name="Plc_IP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Camera_IP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Camera_Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Marking_Speed" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Marking_Power" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Focus_Offset" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TCP_Template" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
